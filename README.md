@@ -62,7 +62,7 @@ VM query
 
 ### Managed
 Running MN cloud SQL
-![MN run](screenshots/managed/running.png)
+![MN run](screenshots/managed/mysql_running.png)
 
 Python script results
 ![MN python](screenshots/managed/managed_python.png)
