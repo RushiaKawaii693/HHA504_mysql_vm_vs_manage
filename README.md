@@ -49,16 +49,13 @@ A .env file can contain the sensitive values.
 ## Screenshots
 ### VM
 Running VM
-![VM run](screenshots/vm/running.png)
+![VM run](screenshots/vm/working.png)
 
 VM configuration
-![VM config](screenshots/vm/vm_config1.png)
+![VM config](screenshots/vm/machineconfig11.png)
 
 SSH connection to MySQL
-![general ssh](screenshots/vm/generalssh.png)
-
-Python script results
-![VM python](screenshots/vm/vm_python.png)
+![general ssh](screenshots/vm/Running_SQL_Commands.png)
 
 VM query
 ![VM query](screenshots/vm/vm_query.png)
