@@ -4,46 +4,47 @@
 Loom recording <https://www.loom.com/share/6bf3424b9cfc4c339fdfcb416e5d5d3e> and <https://www.loom.com/share/d50e2c1923f34a93bfb87c2c53e8ce9a>
  
 ## Chosen platform
-I decided to use google cloud platform to create the virtual machine and the cloud SQL database.
+For this project, I used Google Cloud Platform to set up both the virtual machine and the Cloud SQL database.
+
 
 ## VM
-### VM creation
-1. Select instance to create.
-2. Choose E2 for price and usability.
-3. Choose e2-small for 2GB of memory.
-4. Choose Ubuntu OS system.
-5. Everything else kept to default.
+### Creating the VM
+1. Begin by establishing a new instance.
+2. Choose the E2 family for a nice blend of price and performance.
+3. Choose the e2-small option to acquire 2GB of RAM.
+4. Select Ubuntu as the operating system.
+5. Leave the rest of the settings as they are.
 
-### Firewall configuration
-1. Create a firewall rule.
-2. Name it and give it a description.
-3. Set IP range to 0.0.0.0/0 to allow all IPs.
-4. Set protocol to tcp:3306
+### Setting Up Firewall Rules
+1. Add a new firewall rule.
+2. Provide a clear name and description.
+3. Set the authorized IP range to 0.0.0.0/0 to ensure that the VM can take traffic from anywhere.
+4. Allow MySQL traffic on TCP port 3306.
 
-### SSH steps
-1. Input `sudo apt-get update` to update the OS system.
-2. Input `sudo apt install mysql-server mysql-client` to install mysql into the server.
-3. Input `sudo mysql` to log in into mysql.
-4. Input `CREATE USER 'xxx'@'%' IDENTIFIED BY 'xxx';` to add user to database
-5. Input `GRANT ALL PRIVILEGES ON *.* TO 'xxx'@'%' WITH GRANT OPTION;` to give all privileges to the user.
-6. Edit mysqld.cnf file and input `0.0.0.0/0` to allow for other network connections.
-7. Researt SSH and input `mysql -u dba -p` to locally test the user connection to mysql.
-8. Input the password you set to the username.
+### SSH Configuration Steps:
+1. To refresh the package listings, run sudo apt-get update.
+2. Install MySQL using sudo apt install mysql-server mysql-client.
+3. Run the command sudo mysql to log into MySQL.
+4. Create a new MySQL user with the command: CREATE USER 'xxx'@'%' IDENTIFIED BY 'xxx';
+5. Grant full privileges with the following command: GRANT ALL PRIVILEGES ON *.* TO 'xxx'@'%' WITH GRANT OPTION.
+6. Open the mysqld.cnf file and change the bind address to 0.0.0.0/0 to allow remote connections.
+7. Restart the service, then check the connection locally using mysql -u dba -p.
+8. Enter the password you assigned.
 
-Secrets can be stored in an .env file
+A .env file can contain the sensitive values.
 
 ## Managed Cloud SQL
 ### Cloud SQL
-1. Select to create a sandbox MySQL instance.
-2. Name instance and set a password.
-3. Select a region press create.
+1. Choose to construct a sandbox MySQL instance.
+2. Create an instance name and password.
+3. Select a region and then press the Create button.
 
 ### Configuration
-1. Add `0.0.0.0/0` to authorized networks.
-2. Disable SSL only connection for security.
-3. Add a new user with a username and set a password for it.
+1. Add the IP address '0.0.0.0/0' to the list of allowed networks.
+2. To ensure security, disable SSL-only connections.
+3. Create a new user with a username and password.
 
-Secrets can be stored in an .env file
+A .env file can contain the sensitive values.
 
 ## Screenshots
 ### VM
