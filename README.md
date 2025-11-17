@@ -55,7 +55,7 @@ VM configuration
 ![VM config](screenshots/vm/machineconfig1.png)
 
 SSH connection to MySQL
-![general ssh](screenshots/vm/Running SQL Commands.png)
+![general ssh](screenshots/vm/Running_SQL_Commands.png)
 
 VM query
 ![VM query](screenshots/vm/vm_query.png)
