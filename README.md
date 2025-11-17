@@ -52,7 +52,7 @@ Running VM
 ![VM run](screenshots/vm/working.png)
 
 VM configuration
-![VM config](screenshots/vm/machineconfig11.png)
+![VM config](screenshots/vm/machineconfig1.png)
 
 SSH connection to MySQL
 ![general ssh](screenshots/vm/Running_SQL_Commands.png)
