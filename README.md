@@ -65,7 +65,7 @@ Running MN cloud SQL
 ![MN run](screenshots/managed/mysql_running.png)
 
 Python script results
-![MN python](screenshots/managed/managed_python.png)
+![MN python](screenshots/managed/managed_pythoncode.png)
 
 MN cloud SQL query
 ![MN query](screenshots/managed/query.png)
